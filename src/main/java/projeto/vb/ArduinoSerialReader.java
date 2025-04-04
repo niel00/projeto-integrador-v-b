@@ -37,7 +37,7 @@ public class ArduinoSerialReader {
     }
 
     /**
-     * Método responsável por processar os dados recebidos do Arduino e exibir
+     * Metodo responsável por processar os dados recebidos do Arduino e exibir
      * mensagens personalizadas de acordo com os valores dos sensores.
      */
     private static void processarMensagem(String data) {
@@ -45,7 +45,7 @@ public class ArduinoSerialReader {
         if (data.contains("Umidade do Solo")) {
             if (data.contains("Solo Seco")) {
                 System.out.println("⚠️ O solo está muito seco, ligar sistema de irrigação por 10 minutos!");
-            } else if (data.contains("Solo Úmido")) {
+            } else if (data.contains("Solo Umido")) {
                 System.out.println("✅ O solo está em boas condições.");
             } else {
                 System.out.println("🚨 O solo está encharcado, verificar sistema de drenagem.");
